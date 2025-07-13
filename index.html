@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Math Effect Tutoring</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5faff;
+      color: #222;
+      position: relative;
+      z-index: 1;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('logo.jpg');
+      background-repeat: no-repeat;
+      background-size: 400px;
+      opacity: 0.12;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    header {
+      background: linear-gradient(90deg, #000080, #004080);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .logo {
+      max-width: 120px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    h2 {
+      color: #000080;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      max-width: 220px;
+      border-radius: 10px;
+      border: 2px solid #004080;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .testimonial-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .testimonial {
+      background-color: #ffffff;
+      border-left: 5px solid #004080;
+      padding: 1.2rem;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .testimonial h4 {
+      text-align: right;
+      margin: 0;
+      color: #004080;
+    }
+
+    .contact-btn {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #000080;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin: 10px 0;
+      background-color: #36b39b;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Business Logo" class="logo" />
+    <h1>The Math Effect Tutoring</h1>
+    <a href="#terms" style="position:absolute; top:20px; right:20px; background-color:#ffcc00; color:#000; padding:8px 15px; border-radius:20px; font-weight:bold; text-decoration:none;">Terms & Conditions</a>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#vision">Vision & Mission</a>
+      <a href="#subjects">Modules</a>
+      <a href="#gallery">Gallery</a> <!-- ✅ Gallery tab restored -->
+      <a href="#materials">Materials</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#enroll">Enroll</a>
+      <a href="#terms">Terms</a>
+      <a href="https://wa.me/27639567523" target="_blank">Contact</a>
+    </nav>
+  </header>
+
+  <div class="section" style="background: linear-gradient(135deg, #4e73df, #36b39b); text-align: center; color: white;">
+    <h2>Welcome to The Math Effect Tutoring!</h2>
+    <p>We simplify complex engineering concepts and help students excel.</p>
+  </div>
+
+  <div class="section" id="about">
+    <h2>About Us</h2>
+    <p>The Math Effect was founded by Mr. MI Duma and Mr. A Nyekana to support students in mastering Engineering modules, with a strong focus in Eng maths. 
+      We believe that every student has the ability to excel with the right tools and guidance.</p>
+    <p><strong>Registration Fee:</strong> Free registration</p>
+  </div>
+
+  <div class="section" id="vision">
+    <h2>Vision & Mission</h2>
+    <p><strong>Vision:</strong> To be a leading Engineering mathematics tutoring service, empowering students with the skills
+      and confidence to succeed academically and professionally.</p>
+    <p><strong>Mission:</strong> We're committed to providing high-quality, student-centered tutoring that enhances mathematical understanding,
+      improves problem-solving skills, and fosters academic excellence.</p>
+  </div>
+
+  <div class="section" id="subjects">
+    <h2>Modules Offered</h2>
+    <ul>
+      <li>Engineering Mathematics 1A</li>
+      <li>Engineering Mathematics 1B</li>
+      <li>Engineering Mathematics 2A</li>
+      <li>Engineering Physics 1A</li>
+      <li>Engineering Chemistry 1A</li>
+      <li>Electrotechnology 1A / Electrical Engineering 1A</li>
+    </ul>
+  </div>
+
+  <!-- ✅ Gallery Section -->
+  <div class="section" id="gallery">
+    <h2>Gallery</h2>
+    <p>Check out some photos from our sessions and workshops:</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/220x150?text=Class+1" alt="Class 1">
+      <img src="https://via.placeholder.com/220x150?text=Session+2" alt="Session 2">
+      <img src="https://via.placeholder.com/220x150?text=Online+Tutoring" alt="Online Tutoring">
+      <img src="https://via.placeholder.com/220x150?text=Whiteboard+Work" alt="Whiteboard Work">
+    </div>
+  </div>
+
+  <!-- ✅ Testimonials Section -->
+  <div class="section" id="testimonials">
+    <h2>💬 What Our Students Say</h2>
+    <p style="text-align:center;">We’re proud of our students — here’s what some of them have to say:</p>
+    <div class="testimonial-box">
+      <div class="testimonial">
+        <p>"The Math Effect helped me go from failing to understanding engineering maths clearly. I would really Highly recommend them"</p>
+        <h4>– Sipho D</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Their patience and clarity made Physics much easier for me. I really benefited from these tutorial sessions"</p>
+        <h4>– Lindiwe M., DUT</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Affordable, powerful tutoring. I only joined the math effect in the middle of the semester for physics ,my marks improved, thanks to The Math Effect."</p>
+        <h4>– Musa K</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="materials">
+    <h2>📚 Learning Materials</h2>
+    <p>Click the buttons below to access and download the learning materials for each module:</p>
+    <ul style="list-style-type: none; padding: 0;">
+      <li><a class="download-link" href="https://drive.google.com/drive/folders/15AJgJgsl_HceNcDBnFPMGt6XvhaSJKz-" target="_blank">📘 Engineering Mathematics 1A</a></li>
+      <li><a class="download-link" href="https://drive.google.com/drive/folders/1A-kU-aCb_V5TNgPqTDEhH4pOghZbUeIs" target="_blank">📘 Engineering Mathematics 1B</a></li>
+      <li><a class="download-link" href="https://drive.google.com/drive/folders/1OpfxJNY0K9mfiX5HHuTPsTB0PuuoXoQ6" target="_blank">📘 Engineering Mathematics 2A</a></li>
+      <li><a class="download-link" href="https://drive.google.com/drive/folders/1LXiGlrmPQwvRdqj80P5aW4b4ktykg_L6" target="_blank">⚙️ Engineering Physics 1A</a></li>
+      <li><a class="download-link" href="https://drive.google.com/drive/folders/17IlAitYSlcynnz6DSsvkI5WRxd51KH6Z" target="_blank">🧪 Engineering Chemistry 1A</a></li>
+      <li><a class="download-link" href="https://drive.google.com/drive/folders/1axQAe9mnipOjyv_FkMfFdHbRwHg6E9YV" target="_blank">⚡ Electrotechnology 1A/ Electrical Engineering 1A</a></li>
+    </ul>
+  </div>
+
+  <div class="section" id="enroll">
+    <h2>Student Enrollment Form</h2>
+    <form id="enrollmentForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="module">Module:</label>
+      <select id="module" name="module">
+        <option value="Engineering Mathematics 1A">Engineering Mathematics 1A</option>
+        <option value="Engineering Mathematics 1B">Engineering Mathematics 1B</option>
+        <option value="Engineering Mathematics 2A">Engineering Mathematics 2A</option>
+        <option value="Engineering Physics 1A">Engineering Physics 1A</option>
+        <option value="Engineering Chemistry 1A">Engineering Chemistry 1A</option>
+        <option value="Electrotechnology 1A">Electrotechnology 1A/ Electrical Engineering 1A</option>
+      </select>
+
+      <label for="message">Additional Notes:</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit Enrollment</button>
+    </form>
+    <p id="confirmationMessage" style="color: green; font-weight: bold; display: none;">
+      ✅ Congratulations you have successfully enrolled with The Math Effect.
+    </p>
+  </div>
+
+  <div class="section" style="text-align:center;">
+    <a href="https://wa.me/27639567523" class="contact-btn" target="_blank">
+      📞 Chat with us on WhatsApp
+    </a>
+  </div>
+<div class="section" id="terms">
+  <h2>📜 Terms & Conditions</h2>
+  <p><strong>Last Updated:</strong> July 2025</p>
+
+  <h3>1. Purpose of Our Services</h3>
+  <p>The Math Effect Tutoring offers supplementary academic support to assist students in mastering content, practicing problems, and preparing for assessments responsibly. Tutorials complement official UJ sessions and should not replace them.</p>
+
+  <h3>2. Academic Integrity</h3>
+  <ul>
+    <li>No plagiarism or copying</li>
+    <li>Do not submit tutor content as your own</li>
+    <li>Do not upload or share active UJ assessments</li>
+    <li>Never request tutors to complete assessments</li>
+  </ul>
+  <p>Violators will be removed and reported.</p>
+
+  <h3>3. Student Responsibility</h3>
+  <ul>
+    <li>Use lessons only for learning</li>
+    <li>Do your own work</li>
+    <li>Attend all UJ classes</li>
+    <li>Keep academic integrity</li>
+  </ul>
+
+  <h3>4. WhatsApp Group & Lesson Conduct</h3>
+  <p><strong>Allowed:</strong> Respectful questions, academic sharing, helping others</p>
+  <p><strong>Prohibited:</strong> Bullying, discrimination, spamming, offensive content</p>
+
+  <h3>5. Tutor Conduct</h3>
+  <p>All tutors are expected to be respectful, inclusive, avoid favoritism, and use a student-centered teaching style. Tutors will not answer live assessments.</p>
+
+  <h3>6. Confidentiality</h3>
+  <p>All student information is private. Group chats are monitored and issues are handled professionally.</p>
+
+  <h3>7. Fees & Refunds</h3>
+  <ul>
+    <li>Full payment required before session starts</li>
+    <li>No refunds for cancellations under 6 hours</li>
+  </ul>
+
+  <h3>8. Disclaimer</h3>
+  <p>The Math Effect is not affiliated with UJ. No grade outcomes are guaranteed.</p>
+
+  <h3>9. Contact</h3>
+  <ul>
+    <li>Email: <a href="mailto:thematheffecttutoring@gmail.com">thematheffecttutoring@gmail.com</a></li>
+    <li>WhatsApp: <a href="https://wa.me/27639567523" target="_blank">+27 63 956 7523</a></li>
+    <li>Website: <a href="https://jpda4mcoar9lds093ugytw.on.drv.tw/www.TheMathEffectWeb.com/" target="_blank">The Math Effect Website</a></li>
+  </ul>
+
+  <h3>10. Agreement</h3>
+  <p>By using our services, you agree to all the terms listed above.</p>
+</div>
+
+  <footer style="text-align:center; padding:1rem; background:#e6f9f0; color:#555;">
+    &copy; 2025 The Math Effect Tutoring. All rights reserved.
+  </footer>
+
+  <script>
+    const form = document.getElementById("enrollmentForm");
+    const confirmationMsg = document.getElementById("confirmationMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const module = document.getElementById("module").value;
+      const message = document.getElementById("message").value;
+
+      const url = "https://script.google.com/macros/s/AKfycbx9dTUVaJb_J26jYvYWBQrFJk3JY15Ep9FwS7icakK646TrW6oEnNGeEEwiy64D0Qn4tQ/exec";
+      const params = `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&module=${encodeURIComponent(module)}&message=${encodeURIComponent(message)}`;
+
+      fetch(`${url}?${params}`, { method: "GET" })
+        .then((response) => response.text())
+        .then((data) => {
+          confirmationMsg.style.display = "block";
+          form.reset();
+        })
+        .catch((error) => {
+          alert("ERROR, something went wrong! Please try again later.");
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
